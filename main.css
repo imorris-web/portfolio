@@ -1,0 +1,236 @@
+/* typography */
+h1, h2, p, a, span {
+    font-family: 'roboto', sans-serif;
+}
+
+h1 {
+    font-size: 44px;
+    margin: 0 0 24px 0;
+    line-height: 54px;
+}
+
+h1, h2 {text-transform: capitalize;}
+
+h2, p {
+    font-size: 20px;
+    line-height: 29px;
+    margin: 16px 0;
+}
+
+p {font-weight: 360;}
+
+a, span {
+    color: black;
+    font-size: 16px;
+    font-weight: 380;
+}
+
+a div p {
+    text-decoration: none !important;
+}
+
+span.strikethrough {
+    text-decoration: line-through;
+}
+
+/* reusable classes */
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.two-col {
+    display: flex;
+    gap: 60px;
+}
+
+.two-col > * {
+    width: 440px;
+}
+
+
+/* extra, not pg specific */
+main {
+    margin-bottom: 164px;
+}
+
+body {
+    padding: 180px 0 8px 0;
+    margin: 0;
+}
+
+.centercontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.largegap {gap: 120px;}
+
+.smallgap {gap: 60px;}
+
+.largelogo {
+    width: 148px;
+    height: fit-content;
+}
+
+.smalllogo {
+    width: 64px;
+    height: 45px;
+    margin-bottom: -1px;
+}
+
+.projectimg {
+    width: 1000px;
+    border: 0.5px solid gray;
+}
+
+footer p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.onmobile {
+    display: none;
+}
+
+
+/* homepage */
+.intro {
+    margin-bottom: 180px;
+}
+
+.details {padding-bottom: 21px;}
+
+aside, .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link-wrapper {
+    margin-top: auto;
+    padding-bottom: 21px;
+    display: flex;
+    gap: 60px;
+}
+
+.profile {
+    width: 178px;
+    margin-bottom: 8px;
+}
+
+/* project pages */
+nav {
+    width: 940px;
+    align-items: end;
+    margin: 0 auto 24px auto;
+}
+
+.projectlinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* breakpoints */
+@media screen and (max-width: 1000px) {
+    
+    h1 {
+        /* margin: 0 0 24px 0; */
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    h2, p {
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    .project p {
+        margin: 0;
+    }
+    
+    .container {
+        width: 320px;
+    }
+
+    .two-col {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .two-col > * {
+        max-width: 320px;
+    }
+
+    .project > .container {
+        margin-top: 12px;
+    }
+
+    .intro {
+        margin-bottom: 80px;
+        gap: 24px;
+    }
+
+    .profile {
+        margin-left: 71px;
+        margin-right: 71px;
+    }
+
+    .link-wrapper {padding-bottom: 0;}
+
+    body {
+        padding: 80px 0 48px 0;
+    }
+
+    main {
+        margin-bottom: 48px;
+    }
+
+    aside div.link-wrapper {
+        display: none;
+    }
+
+    nav {
+        width: 320px;
+    }
+
+    div.onmobile {
+        display: flex;
+        gap: 24px;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    footer div, nav .projectlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    footer div > *, .projectlinks a {
+        line-height: 32px;
+    }
+
+    .largegap {gap: 56px;}
+
+    .smallgap {gap: 32px;}
+
+    .largelogo, .smalllogo {
+        width: 71px;
+    }
+
+    .projectimg {
+        width: 320px;
+    }
+}
